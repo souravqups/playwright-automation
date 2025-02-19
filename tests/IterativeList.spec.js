@@ -6,4 +6,6 @@ test('Lunch Application', async ({page})=>{
     const count = await rows.count();
     for (let i = 0; i < count; ++i)
         console.log(await rows.nth(i).textContent());
+
+    await page.close();
 });

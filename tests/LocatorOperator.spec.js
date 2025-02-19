@@ -6,4 +6,6 @@ test('Lunch Application', async ({page})=>{
     await page.getByRole('button').click();
     const productItems = page.locator("xpath = (//div[@class='inventory_item'])");
     await expect(productItems).toHaveCount(6);
+
+    await page.close();
 });

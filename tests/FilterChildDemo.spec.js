@@ -8,5 +8,6 @@ test('Lunch Application', async ({page})=>{
     .filter({ has: page.getByRole('link', { name: 'Sauce Labs Bolt T-Shirt' }) })
     .getByRole("button", {name: "Add to cart"})
     .click();
+    await page.close();
     
 })
